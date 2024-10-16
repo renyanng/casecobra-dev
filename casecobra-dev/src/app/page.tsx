@@ -1,8 +1,9 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Image from "next/image";
-import { ArrowRight, Check, Link, Star } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
 import Phone from "@/components/phone";
 import { Icons } from "@/components/icon";
+import Link from "next/link";
 import { Reviews } from "@/components/Reviews";
 import { buttonVariants } from "@/components/ui/button";
 
