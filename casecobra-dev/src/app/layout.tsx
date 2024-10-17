@@ -35,7 +35,13 @@ export default function RootLayout({
       <body
         className={inter.className}>
           <Navbar />
-        {children}
+
+          <main className='flex-1 flex flex-col min-h-[calc(100vh-3.5rem-8px)]'>
+            <div className='flex-1 flex flex-col h-full'>
+            {children}
+            </div>
+          </main>
+
           <Footer />
       </body>
     </html>
