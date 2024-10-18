@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from 'next/font/google';
 import Navbar from "../components/navbar";
 import Footer from "../components/ui/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,9 +41,11 @@ export default function RootLayout({
             <div className='flex-1 flex flex-col h-full'>
             {children}
             </div>
-          </main>
 
           <Footer />
+          </main>
+          <Toaster />
+
       </body>
     </html>
   );
