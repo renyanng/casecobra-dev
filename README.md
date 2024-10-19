@@ -3,7 +3,7 @@
 Built with the Next.JS 14 App Router, TailwindCSS, ShadCN UI, and Kinde Auth.
 
 <p align="center">
-  <img src="https://github.com/renyanng/casecobra-dev/blob/main/casecobra-dev/public/casecobra-logo.png" alt="Project Image" width="50%" height="50%">
+  <img src="https://github.com/renyanng/casecobra-dev/blob/main/casecobra-dev/public/casecobra-logo.png" alt="Project Image" width="30%" height="30%">
 </p>
 
 ##Features
