@@ -6,15 +6,15 @@ const f = createUploadthing();
 export const ourFileRouter = {
 
   imageUploader: f({ image: { maxFileSize: "4MB" } })
-  .input(z.object({configID:z.string().optional()}))
+  .input(z.object({configId:z.string().optional()}))
 
     .middleware(async ({ input }) => {
             return{input}
     })
     .onUploadComplete(async ({ metadata, file }) => {
-      const {configID} = metadata.input
+      const {configId} = metadata.input
 
-      return {configID}
+      return {configId}
     }),
 } satisfies FileRouter;
 
