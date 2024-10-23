@@ -80,6 +80,7 @@ const config: Config = {
 			'fade-in': 'fade-in 0.5s linear forwards',
 			flashing: 'flashing 1.4s infinite linear',
 		  },
+		  
   	}
   },
   plugins: [require("tailwindcss-animate")],

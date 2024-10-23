@@ -9,8 +9,8 @@ import HandleComponent from '@/components/ui/handleComponent'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { RadioGroup } from '@headlessui/react'
 import { useState } from 'react'
-import { COLORS } from '@/validators/option-validator'
 import { Label } from '@/components/ui/label'
+import { COLORS } from '@/validators/option-validator'
 
 interface DesignConfiguratorProps {
   configId: string
@@ -31,8 +31,8 @@ const DesignConfigurator = ({ configId, imageURL, imageDimensions }: DesignConfi
   return (
     <div className="relative mt-20 grid grid-cols-3 mb-20 pb-20">
       <div
-        className="relative h-[-37.5rem overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed
-       border-gray-300 p-12 text-center focus:outlin-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        className="relative h-[37.5rem] overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed
+       border-gray-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
       >
         <div className="relative w-60 bg-opacity-50 pointer-events-none aspect-[896/1831]">
           <AspectRatio
@@ -52,7 +52,9 @@ const DesignConfigurator = ({ configId, imageURL, imageDimensions }: DesignConfi
           <div
             className={cn(
               'absolute inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px]',
-              `bg-zinc-950`
+              options.color.tw === 'zinc-900' && 'bg-zinc-900',
+              options.color.tw === 'blue-950' && 'bg-blue-950',
+              options.color.tw === 'rose-950' && 'bg-rose-950'
             )}
           />
         </div>
@@ -110,9 +112,7 @@ const DesignConfigurator = ({ configId, imageURL, imageDimensions }: DesignConfi
                         className={({ active, checked }) =>
                           cn(
                             'relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 active:ring-0 focus:ring-0 active:outline-none focus:outline-none border-2 border-transparent',
-                            {
-                              [`border-${color.tw}`]: active || checked,
-                            }
+                            active || checked ? `border-${color.tw}` : ''
                           )
                         }
                       >
